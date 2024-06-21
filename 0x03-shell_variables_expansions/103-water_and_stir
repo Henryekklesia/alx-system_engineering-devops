@@ -1,0 +1,2 @@
+#!/bin/bash
+printf "ibase=water; $WATER\nibase=stir; $STIR\n" | { read water_value; read stir_value; printf "obase=bestchol; %d\n" "$((water_value + stir_value))" | bc; }
